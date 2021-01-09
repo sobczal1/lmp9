@@ -12,7 +12,7 @@ int  backsubst(Matrix *x, Matrix *mat, Matrix *b) {
 	if(row!=col) return 2;
 	if(x->r!=row) return 2;
 	if(b->r!=row) return 2;
-	for(int i=r-1;i>=0;i--)
+	for(int i=row-1;i>=0;i--)
 	{
 		double s=0;
 		for(int j=i+1;j<col;j++)
