@@ -16,7 +16,7 @@ int  backsubst(Matrix *x, Matrix *mat, Matrix *b) {
 	{
 		double s=0;
 		for(int j=i+1;j<col;j++)
-			s += mat->data[i][j] * x->data[i][0];
+			s += mat->data[i][j] * x->data[j][0];
 		if(mat->data[i][i]==0) return 1;
 		x->data[i][0]= ( (b->data[i][0]-s) / mat->data[i][i] );
 	}
