@@ -1,6 +1,5 @@
 #include "gauss.h"
-//sprawdzenie czy git dziala
-//test2
+
 /**
  * Zwraca 0 - elimnacja zakonczona sukcesem
  * Zwraca 1 - macierz osobliwa - dzielenie przez 0
