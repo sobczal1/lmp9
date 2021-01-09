@@ -13,7 +13,7 @@ int eliminate(Matrix *mat, Matrix *b){
 			double wsp = mat->data[j][i]/mat->data[i][i];
 			for(int k = 0; k < col; k++)
 				mat->data[j][k] -= mat->data[i][k]*wsp;
-			b->data[j][0] -= mat->data[i][0]*wsp;
+			b->data[j][0] -= b->data[i][0]*wsp;
 		}
 	}
 	return 0;
