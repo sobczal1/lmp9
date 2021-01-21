@@ -13,14 +13,22 @@ int main(int argc, char ** argv) {
 
 	if (A == NULL) return -1;
 	if (b == NULL) return -2;
+	printf("Macierz współczynników lewych stron\n");
 	printToScreen(A);
+	printf("Macierz współczynników prawych stron\n");
 	printToScreen(b);
 
 	res = eliminate(A,b);
+	
+	printf("Macierz współczynników lewych stron po eliminacji\n");
+	printToScreen(A);
+	printf("Macierz współczynników prawych stron po eliminacji\n");
+	printToScreen(b);
+
 	x = createMatrix(b->r, 1);
 	if (x != NULL) {
 		res = backsubst(x,A,b);
-
+		printf("Macierz rozwiązań\n");
 		printToScreen(x);
 	  freeMatrix(x);
 	} else {
